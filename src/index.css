@@ -12,7 +12,7 @@
 
 body {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   color: #f5f5f5;
@@ -79,7 +79,7 @@ footer {
 }
 
 .container {
-  width: min(95%, 780px);
+  width: min(90%, 780px);
   margin: 0 auto;
 }
 
@@ -195,7 +195,6 @@ header h1 {
   margin-top: 33px;
 }
 .question-wrapper .options button {
-  flex-basis: 50%;
   margin: 0;
   border-radius: 10px;
   font-size: 18px;
@@ -203,6 +202,8 @@ header h1 {
   align-items: center;
   gap: 15px;
   font-family: "Nunito Sans", sans-serif;
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .question-footer {
@@ -255,12 +256,12 @@ header h1 {
 }
 
 .finish-screen {
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
 }
 
 .finish-screen h2 {
@@ -272,7 +273,6 @@ header h1 {
   width: 150px;
   height: 60px;
   border-radius: 10px;
-
   font-size: 38px;
   display: flex;
   justify-content: center;
@@ -291,6 +291,11 @@ header h1 {
   font-size: 28px;
 }
 
+.finish-screen .status {
+  font-size: 24px;
+  text-align: center;
+}
+
 .btn-retake {
   background: #5022a5;
 }
@@ -303,4 +308,24 @@ header h1 {
   display: flex;
   gap: 15px;
   color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 48px;
+    padding-top: 50px;
+  }
+  .start-screen h2 {
+    font-size: 24px;
+  }
+  .start-screen p {
+    font-size: 18px;
+  }
+  .question-wrapper .options {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  .question-wrapper h3 {
+    font-size: 20px;
+  }
 }

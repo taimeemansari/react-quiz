@@ -8,9 +8,9 @@ const FinishScreen = ({ score, questions, dispatch }) => {
   return (
     <div className="finish-screen">
       <h2>Your Score</h2>
-      <div className={`percentage ${score > 80 ? "pass" : "fail"}`}>{`${percentage.toFixed(2)}%`}</div>
+      <div className={`percentage ${percentage > 80 ? "pass" : "fail"}`}>{`${percentage.toFixed(2)}%`}</div>
       <div className="status">
-        {score > 80 ? "Congrats! You have Qualified the Quiz" : "Sorry! You have failed for Qualification"}
+        {percentage > 80 ? "Congrats! You have Qualified the Quiz" : "Sorry! You have failed for Qualification"}
       </div>
       <button className="btn btn-retake" onClick={() => dispatch({ type: "restart" })}>
         Re-take Quiz
